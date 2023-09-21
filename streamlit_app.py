@@ -16,5 +16,6 @@ st.title("Name Classifier")
 st.subheader("Harnessing the Power of Machine Learning to Predict Nationalities from Names")
 input = st.text_input("Enter a Name")
 
-st.write(f"**Your Prediction is -** {model.predict(input, labels = LABELS)}")   
+if input:
+  st.write(f"**Your Prediction is -** {model.predict(input, labels = LABELS)}")   
 
