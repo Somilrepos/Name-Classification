@@ -7,7 +7,7 @@ from PIL import Image
 LABELS = ['English', 'Irish', 'Chinese', 'French', 'Portuguese', 'Greek', 'German', 'Dutch', 'Russian', 'Vietnamese', 'Arabic', 'Spanish', 'Scottish', 'Japanese', 'Italian', 'Korean', 'Polish', 'Czech']
 
 model = model.RNN(utils.N_LETTERS, 128, 18)
-model.load_state_dict(torch.load("model_state"))
+model.load_state_dict(torch.load("data/model_state"))
 
 image = Image.open('data/nationalities.jpg')
 image = image.resize((600,300))
